@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#802918",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e3e2e0",
+              "on-error": "#ffffff",
+              "surface-bright": "#faf9f6",
+              "background": "#faf9f6",
+              "surface-container-high": "#e9e8e5",
+              "on-tertiary-container": "#b4b59e",
+              "on-tertiary-fixed": "#1b1d0e",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#ffb4a5",
+              "primary-container": "#2d4c3b",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#accfb8",
+              "surface-container-highest": "#e3e2e0",
+              "on-error-container": "#93000a",
+              "primary": "#163526",
+              "surface": "#faf9f6",
+              "surface-dim": "#dbdad7",
+              "on-primary-fixed-variant": "#2e4d3c",
+              "on-primary-container": "#99bca6",
+              "tertiary-fixed-dim": "#c8c8b0",
+              "secondary-fixed": "#ffdad3",
+              "on-tertiary-fixed-variant": "#474836",
+              "on-primary-fixed": "#012113",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1a1c1a",
+              "tertiary": "#2f3120",
+              "on-primary": "#ffffff",
+              "surface-tint": "#466553",
+              "outline": "#727973",
+              "primary-fixed": "#c7ebd4",
+              "on-secondary-container": "#732010",
+              "on-background": "#1a1c1a",
+              "tertiary-fixed": "#e4e4cc",
+              "surface-container-low": "#f4f3f1",
+              "tertiary-container": "#454735",
+              "inverse-surface": "#2f312f",
+              "secondary-container": "#fd876f",
+              "secondary": "#9f402d",
+              "outline-variant": "#c2c8c1",
+              "on-secondary-fixed": "#3e0500",
+              "inverse-on-surface": "#f2f1ee",
+              "surface-container": "#efeeeb",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#424843",
+              "inverse-primary": "#accfb8"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(22, 53, 38, 0.06);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #9f402d 0%, #fd876f 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-[#faf9f6] dark:bg-stone-950 shadow-[0_20px_40px_rgba(22,53,38,0.06)] font-['Noto_Serif'] antialiased">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-bold tracking-tight text-[#163526] dark:text-emerald-500" href="code1.html">The Epicurean</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#424843] dark:text-stone-400 hover:text-[#163526] transition-all duration-300 ease-in-out hover:opacity-80" href="code1.html">Menu</a>
+<a class="text-[#424843] dark:text-stone-400 hover:text-[#163526] transition-all duration-300 ease-in-out hover:opacity-80" href="code2.html">Our Story</a>
+<a class="text-[#163526] dark:text-emerald-400 border-b-2 border-[#9f402d] pb-1 transition-all duration-300 ease-in-out hover:opacity-80" href="code3.html">Locations</a>
+</div>
+<div class="flex items-center space-x-6">
+<a href="code1.html" title="View Cart" class="scale-95 active:scale-90 transition-transform text-[#163526] dark:text-emerald-500 hover:opacity-70">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-16">
+<!-- Hero Header -->
+<header class="mb-24 text-center">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary mb-6 leading-tight">Our Sanctuaries</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+                From the bustling heart of the city to the tranquil whispers of the coast, find your table at one of our curated culinary destinations.
+            </p>
+</header>
+<!-- Locations Grid (Asymmetric Editorial Layout) -->
+<div class="space-y-40">
+<!-- Location 1: The City Bistro -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="relative group">
+<img alt="The City Bistro Interior" class="rounded-xl w-full h-[600px] object-cover editorial-shadow transform group-hover:scale-[1.01] transition-transform duration-500" data-alt="Luxurious dark wood restaurant interior with mood lighting, gold accents, and large windows overlooking a city skyline at night." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtmk2VVKcqL436oOi-4fUw9mcvzJj3agWwUk-1LcdAB78iXNI8uvNfYTdG4m0wwjtwS7c_b1T9oB8cExrNE5E2CCgUEmjKXqg1yKrbCyBez3flJyVaKhV7aSA-MMu1egEQ5Fv6oIrdWoMUxVLKsMGUZ3hYGssUYRbRFAmvky7dYTvvdq0DUVUZJnnYDNgM8E56_JP2Mqr5BNW7ajT1B0jcjzG9EK9mfOLTyW-jfFprzcHEnqvAsgK5TAUz0M17-RHcFutuiUpHrkYv"/>
+<div class="absolute -bottom-6 -right-6 hidden md:block w-64 h-64 rounded-xl overflow-hidden border-8 border-surface editorial-shadow">
+<img alt="Signature Dish" class="w-full h-full object-cover" data-alt="Close-up of a perfectly plated gourmet steak with red wine reduction and microgreens on a ceramic plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQTgNL90-DA78EcmotaoW1TYSNLIHB8l7ZfbnOPB4QAP8khJk193Pioo12iALyqMkyYlAdYLxE5eFKw77vEdVcHhn1TN33dMJU40hJ7v8NAJ-3ds2O98od8dQU6evcl4CMaI9atEr7DML--4KX7nn8bXB97lyy5eAc3Gll6elVnHhUxSG-nZ8VtsTBp07GK7raHdPIMv1Kw8qpKR7xnN_D5uCfqhldXgIvqLFptUUq6StAfjtSMu4Q5RUx4Zc4_2yI6Zsh_hLrv7YC"/>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 space-y-8 pl-0 lg:pl-12">
+<div class="space-y-4">
+<span class="text-secondary font-semibold tracking-widest uppercase text-xs">Flagship Destination</span>
+<h2 class="font-headline text-4xl font-bold text-primary">The City Bistro</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            Nestled in the historic district, our flagship location pairs industrial heritage with modern refinement. Experience high-octane culinary artistry in a room designed for deep conversation and celebration.
+                        </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-bold text-primary">Address</h4>
+<p class="text-on-surface-variant">124 Heritage Square, Metropolis District, NY 10012</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<div>
+<h4 class="font-bold text-primary">Opening Hours</h4>
+<p class="text-on-surface-variant">Mon – Thu: 11:00 AM – 10:00 PM</p>
+<p class="text-on-surface-variant">Fri – Sun: 10:00 AM – 11:30 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<h4 class="font-bold text-primary">Reservations</h4>
+<p class="text-on-surface-variant">+1 (212) 555-0198</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button onclick="openBooking('The City Bistro', '+1 (212) 555-0198')" class="bg-secondary text-white px-8 py-4 rounded-full font-bold signature-gradient hover:opacity-90 transition-all editorial-shadow active:scale-95">
+                            Book a Table
+                        </button>
+<a href="https://maps.google.com/?q=124+Heritage+Square+Metropolis+District+NY+10012" target="_blank" class="flex items-center gap-2 border border-outline-variant/20 px-8 py-4 rounded-full font-bold text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="map">map</span>
+                            View on Map
+                        </a>
+</div>
+</div>
+</section>
+<!-- Location 2: The Garden Terrace -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-8 pr-0 lg:pr-12">
+<div class="space-y-4">
+<span class="text-secondary font-semibold tracking-widest uppercase text-xs">Botanical Escape</span>
+<h2 class="font-headline text-4xl font-bold text-primary">The Garden Terrace</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            An oasis of verdant greens and soft sunlight. Our terrace brings the outdoors in, featuring a seasonal menu that celebrates the harvest from our local organic partners.
+                        </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-bold text-primary">Address</h4>
+<p class="text-on-surface-variant">45 Conservatory Way, North Hills, CA 90210</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<div>
+<h4 class="font-bold text-primary">Opening Hours</h4>
+<p class="text-on-surface-variant">Tue – Sun: 09:00 AM – 09:00 PM</p>
+<p class="text-on-surface-variant">Monday: Closed for Maintenance</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<h4 class="font-bold text-primary">Reservations</h4>
+<p class="text-on-surface-variant">+1 (310) 555-0142</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button onclick="openBooking('The Garden Terrace', '+1 (310) 555-0142')" class="bg-secondary text-white px-8 py-4 rounded-full font-bold signature-gradient hover:opacity-90 transition-all editorial-shadow active:scale-95">
+                            Book a Table
+                        </button>
+<a href="https://maps.google.com/?q=45+Conservatory+Way+North+Hills+CA+90210" target="_blank" class="flex items-center gap-2 border border-outline-variant/20 px-8 py-4 rounded-full font-bold text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="map">map</span>
+                            View on Map
+                        </a>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="relative group">
+<img alt="The Garden Terrace Interior" class="rounded-xl w-full h-[600px] object-cover editorial-shadow transform group-hover:scale-[1.01] transition-transform duration-500" data-alt="Airy and bright restaurant patio filled with hanging plants, white marble tables, and soft morning sunlight streaming through glass panes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwBVGCgaagA6eaRnsK0tLvyCZJy5CkfRsqBI2WVaWcCEwswAy3PAcfrATKRk4snwOXCUCg1Sw7KQzI5jTykx_Hx3JuRhPjruBMKteq5nU3gG0vdvyYCcKn5d-F2fhyDU3XpSkMZ8iyaJd2XYB5ojJfiKx9gkAD_teBRvYjYovErNWWA39oOnk3szdthid8s8BHrgNqVBneIsu3GLpD4r2XaGpXGR_bqAyCf0xg5hhlqBvDDpWeAljVvsUEK3PtzGT-e7VEksYsPN8q"/>
+</div>
+</div>
+</section>
+<!-- Location 3: The Coastal Lounge -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Coastal View" class="rounded-xl h-[500px] object-cover editorial-shadow" data-alt="Sun-drenched restaurant interior with blue and white decor, overlooking a turquoise ocean with gentle waves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqaorlxcgOSeK-xwryIKxlY6sumVql4xzEAdDe4MtPwCWs6NghRyuQ_5K50JPAjVAfRclQdSIeZ90Z1cW73ggyzMQKfMZEO1PkQa_QDDqfiuNk-Nyx-_F6j39jmsIPNGrNhQfBOetVkNR56Wwcq05P5pWZ2fIgXJb07xgJNbncQ11YZaZxV0gN5IYM8b0LjuYvw2Pz8xgQB2PngOUrzO_Sc4_xJE4P-as2GXWD4OaZcVjQFRoSKv3g5OCn3OsDG-8upKpOmh_1OZdi"/>
+<div class="space-y-4">
+<img alt="Cocktails" class="rounded-xl h-[242px] w-full object-cover editorial-shadow" data-alt="Exotic tropical cocktails with fruit garnishes on a wooden bar top with a blurred beach background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqklBMpJTOr2e0aICkAZ9YKctLc1ss_IfXAPWX4-Z0t4xFT35SZNVbAv79XeMRXYcZ9f8TUzQRAzdU2EdXHk9BtpgwZ8r7x1n9Cv1PILlUktD4LScqM61tmlZMqPGvAQxKo0hroQb8Asp3FS5xP5dcvlQsikuwgFZfFo-IHieIRWPr_UwRxJ7aJ0O0BAMNoIp_S35pd3hXDQAvm911gmX2dytyRtv1j-VSZhFb4os0UCBMTPhlqLtwRgMSU4YBgJazUiNJeEFKOOVx"/>
+<div class="bg-primary h-[242px] rounded-xl flex items-center justify-center p-8 text-center editorial-shadow">
+<p class="text-primary-fixed italic font-headline text-lg">"Where the horizon meets your palate."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 space-y-8 pl-0 lg:pl-12">
+<div class="space-y-4">
+<span class="text-secondary font-semibold tracking-widest uppercase text-xs">Serene Shoreline</span>
+<h2 class="font-headline text-4xl font-bold text-primary">The Coastal Lounge</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            Located on the edge of the sapphire bay, this lounge offers the freshest seafood and hand-crafted spirits. Watch the sun dip below the waves as you dine in effortless coastal luxury.
+                        </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-bold text-primary">Address</h4>
+<p class="text-on-surface-variant">88 Ocean Breeze Blvd, Emerald Coast, FL 32541</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<div>
+<h4 class="font-bold text-primary">Opening Hours</h4>
+<p class="text-on-surface-variant">Daily: 12:00 PM – Midnight</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<h4 class="font-bold text-primary">Reservations</h4>
+<p class="text-on-surface-variant">+1 (850) 555-0167</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button onclick="openBooking('The Coastal Lounge', '+1 (850) 555-0167')" class="bg-secondary text-white px-8 py-4 rounded-full font-bold signature-gradient hover:opacity-90 transition-all editorial-shadow active:scale-95">
+                            Book a Table
+                        </button>
+<a href="https://maps.google.com/?q=88+Ocean+Breeze+Blvd+Emerald+Coast+FL+32541" target="_blank" class="flex items-center gap-2 border border-outline-variant/20 px-8 py-4 rounded-full font-bold text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="map">map</span>
+                            View on Map
+                        </a>
+</div>
+</div>
+</section>
+</div>
+<!-- Global Map Section -->
+<section class="mt-40 mb-20 bg-surface-container-lowest rounded-xl p-1 overflow-hidden editorial-shadow">
+<div class="w-full h-[500px] bg-surface-container-high relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 pattern-dots"></div>
+<!-- Map Placeholder -->
+<div class="relative z-10 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="map">map</span>
+<h3 class="font-headline text-2xl text-primary">Interactive Map</h3>
+<p class="text-on-surface-variant">Select a location to see directions and local landmarks.</p>
+<div class="flex justify-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary/50"></span>
+<span class="w-3 h-3 rounded-full bg-secondary/50"></span>
+</div>
+</div>
+<!-- Visual Map Image (Placeholder Logic) -->
+<img alt="Map background" class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="A stylized, minimal map of a city coastal area with clean lines and soft earthy tones." data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCby3uGBAIbBsFqjljAAISkjQiXTH1ucThVKM_OcdPyulcIcqzi1wWl5DaZXaoKGGkLcEgl33ChiCZ6SScNobobzdcG-rrQaiX8o6bdZucW8A3su6nWZa74qg_yFObHTTm0yiGEaI7QkX6_LUx84SYLm1-1jv63V14ZWO09mwHAC_qh_2K8AM7iF9AXcIXqTjvmf9cYSQfwX-u9ibZtIbeTXLmAK4fVKoJtJc6LZw7tCMXnw58peym0HjkdQEmkolBXGUc-y9TN3xV"/>
+</div>
+</section>
+</main>
+<!-- Booking Modal -->
+<div id="booking-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-primary/40 backdrop-blur-sm">
+  <div class="bg-surface p-10 rounded-xl max-w-md w-full text-center space-y-6 shadow-2xl">
+    <h2 class="text-3xl font-headline font-bold text-primary" id="modal-location-name">Book a Table</h2>
+    <p class="text-on-surface-variant">Call us to reserve your seat or fill in your details below.</p>
+    <p class="text-secondary font-bold text-lg" id="modal-phone"></p>
+    <form onsubmit="submitBooking(event)" class="space-y-4 text-left">
+      <input type="text" placeholder="Your Name" required class="w-full border border-outline-variant/40 rounded-lg px-4 py-3 text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary"/>
+      <input type="email" placeholder="Email Address" required class="w-full border border-outline-variant/40 rounded-lg px-4 py-3 text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary"/>
+      <input type="date" required class="w-full border border-outline-variant/40 rounded-lg px-4 py-3 text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary"/>
+      <select class="w-full border border-outline-variant/40 rounded-lg px-4 py-3 text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary">
+        <option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option>
+      </select>
+      <div class="flex gap-4 pt-2">
+        <button type="submit" class="flex-1 bg-secondary text-white py-3 rounded-full font-bold hover:opacity-90 transition-opacity">Confirm Booking</button>
+        <button type="button" onclick="closeBooking()" class="flex-1 border border-outline-variant/40 text-primary py-3 rounded-full font-bold hover:bg-surface-container-high transition-colors">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Booking Success Modal -->
+<div id="booking-success" class="fixed inset-0 z-[110] hidden items-center justify-center p-4 bg-primary/40 backdrop-blur-sm">
+  <div class="bg-surface p-10 rounded-xl max-w-md w-full text-center space-y-6 shadow-2xl">
+    <div class="w-20 h-20 bg-primary-fixed rounded-full flex items-center justify-center mx-auto">
+      <span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+    </div>
+    <h2 class="text-3xl font-headline font-bold text-primary">Reservation Confirmed!</h2>
+    <p class="text-on-surface-variant">We look forward to welcoming you. A confirmation will be sent to your email.</p>
+    <div class="flex gap-4">
+      <button onclick="closeBookingSuccess()" class="flex-1 bg-secondary text-white py-3 rounded-full font-bold hover:opacity-90 transition-opacity">Done</button>
+      <a href="code1.html" class="flex-1 bg-primary text-white py-3 rounded-full font-bold hover:opacity-80 transition-opacity text-center">Explore Menu</a>
+    </div>
+  </div>
+</div>
+<script>
+  function openBooking(name, phone) {
+    document.getElementById('modal-location-name').textContent = 'Book at ' + name;
+    document.getElementById('modal-phone').textContent = phone;
+    document.getElementById('booking-modal').classList.replace('hidden', 'flex');
+  }
+  function closeBooking() {
+    document.getElementById('booking-modal').classList.replace('flex', 'hidden');
+  }
+  function submitBooking(e) {
+    e.preventDefault();
+    closeBooking();
+    document.getElementById('booking-success').classList.replace('hidden', 'flex');
+  }
+  function closeBookingSuccess() {
+    document.getElementById('booking-success').classList.replace('flex', 'hidden');
+  }
+</script>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-[#163526] dark:bg-stone-950 border-t border-[#424843]/20 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col items-center py-12 px-8 w-full max-w-screen-2xl mx-auto">
+<div class="font-['Noto_Serif'] text-lg text-[#faf9f6] mb-8">The Epicurean</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="text-[#c2c8c1] hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#c2c8c1] hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-[#c2c8c1] hover:text-white transition-colors" href="code2.html#contact">Contact Us</a>
+</div>
+<p class="text-[#c2c8c1] opacity-60">© 2024 The Epicurean Editorial. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

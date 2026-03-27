@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Epicurean | Artisanal Bistro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffdad3",
+              "primary-fixed": "#c7ebd4",
+              "secondary-fixed-dim": "#ffb4a5",
+              "on-tertiary-fixed-variant": "#474836",
+              "secondary": "#9f402d",
+              "inverse-surface": "#2f312f",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#dbdad7",
+              "surface-tint": "#466553",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#c8c8b0",
+              "surface-container-low": "#f4f3f1",
+              "surface-container-highest": "#e3e2e0",
+              "outline": "#727973",
+              "on-primary-container": "#99bca6",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#b4b59e",
+              "tertiary": "#2f3120",
+              "tertiary-fixed": "#e4e4cc",
+              "on-primary-fixed": "#012113",
+              "inverse-on-surface": "#f2f1ee",
+              "on-secondary-container": "#732010",
+              "surface-container": "#efeeeb",
+              "surface-bright": "#faf9f6",
+              "on-secondary-fixed": "#3e0500",
+              "surface-container-high": "#e9e8e5",
+              "on-surface-variant": "#424843",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#1b1d0e",
+              "inverse-primary": "#accfb8",
+              "surface-variant": "#e3e2e0",
+              "secondary-container": "#fd876f",
+              "surface": "#faf9f6",
+              "tertiary-container": "#454735",
+              "background": "#faf9f6",
+              "on-secondary-fixed-variant": "#802918",
+              "on-error": "#ffffff",
+              "on-surface": "#1a1c1a",
+              "on-primary": "#ffffff",
+              "outline-variant": "#c2c8c1",
+              "primary": "#163526",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#accfb8",
+              "primary-container": "#2d4c3b",
+              "on-background": "#1a1c1a",
+              "on-primary-fixed-variant": "#2e4d3c"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed-variant">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-[#faf9f6] dark:bg-stone-950 shadow-[0_20px_40px_rgba(22,53,38,0.06)]">
+<nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto font-['Noto_Serif'] antialiased">
+<div class="text-2xl font-bold tracking-tight text-[#163526] dark:text-emerald-500">
+                The Epicurean
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#163526] dark:text-emerald-400 border-b-2 border-[#9f402d] pb-1 transition-all duration-300 ease-in-out hover:opacity-80" href="code1.html">Menu</a>
+<a class="text-[#424843] dark:text-stone-400 hover:text-[#163526] transition-all duration-300 ease-in-out hover:opacity-80" href="code2.html">Our Story</a>
+<a class="text-[#424843] dark:text-stone-400 hover:text-[#163526] transition-all duration-300 ease-in-out hover:opacity-80" href="code3.html">Locations</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="scale-95 active:scale-90 transition-transform relative" onclick="toggleCart()">
+<span class="material-symbols-outlined text-[#163526] text-2xl" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full hidden" id="cart-count">0</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 py-12">
+<!-- Hero Section -->
+<section class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-primary leading-tight">
+                    Editorial <span class="italic font-normal text-secondary">Flavor.</span>
+</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+                    Experience a curated selection of seasonal ingredients prepared with michelin-grade precision and served with artisanal warmth.
+                </p>
+<div class="pt-4 flex gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-medium hover:bg-gradient-to-br from-secondary to-secondary-container transition-all duration-300 shadow-lg" href="#menu-grid">
+                        Explore the Menu
+                    </a>
+</div>
+</div>
+<div class="lg:col-span-7 relative">
+<div class="aspect-[16/10] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Signature Dish" class="w-full h-full object-cover" data-alt="Close-up of an elegant gourmet pasta dish with microgreens and parmesan shavings on a dark rustic ceramic plate with soft directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApIod6Vx0a6jo65GGbk-9FniNp92GX4QB-3tJIz8h6wnqnd3bgr4mlB9CpS6vzmWNrxVDFiXyB9a6D8Tl2wqNDUmVzY3Z2UwCNCFQah7ZiYlL3e9fpw7EhHlLhcG-hcBzGBPUztnMd4_jnoNUOlPS7Ar2hmTk17RepPVRZaxZfF48BOLdMdt4Wplmg9ORhe6DIovfeVtZr3VmvoZBVYXYPFT-7FHbDmbdpF13EC8SzmrltPrbmdNHajI5BFvtw9QJ-z10IdZG90KjW"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-primary p-8 rounded-xl shadow-xl hidden md:block max-w-xs">
+<p class="text-primary-fixed italic font-headline text-xl">"A celebration of nature's finest seasonal harvest."</p>
+<p class="text-on-primary-container text-sm mt-4 font-label tracking-widest uppercase">Chef Julian Vance</p>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/20 pb-8">
+<div>
+<h2 class="text-3xl font-headline font-bold text-primary">The Seasonal Menu</h2>
+<p class="text-on-surface-variant mt-2">Filter by course or curiosity</p>
+</div>
+<div class="flex flex-wrap gap-3" id="filter-container">
+<button class="filter-btn active-filter bg-primary text-on-primary px-6 py-2 rounded-full font-medium transition-all duration-300" onclick="filterMenu('All')">All</button>
+<button class="filter-btn bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300" onclick="filterMenu('Mains')">Mains</button>
+<button class="filter-btn bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300" onclick="filterMenu('Drinks')">Drinks</button>
+<button class="filter-btn bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-medium hover:bg-secondary hover:text-white transition-all duration-300" onclick="filterMenu('Desserts')">Desserts</button>
+</div>
+</div>
+</section>
+<!-- Menu Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="menu-grid">
+<!-- Dynamic items will be injected here -->
+</section>
+</main>
+<!-- Navigation Drawer / Cart Sidebar -->
+<aside class="fixed right-0 top-0 h-full w-full md:w-96 z-[60] bg-[#faf9f6]/80 backdrop-blur-xl translate-x-full transition-transform duration-500 shadow-[-20px_0_40px_rgba(22,53,38,0.06)] flex flex-col" id="cart-drawer">
+<div class="flex flex-col p-8 h-full space-y-6">
+<div class="flex justify-between items-center">
+<div>
+<h3 class="text-2xl font-headline font-bold text-primary">Your Selection</h3>
+<p class="text-sm text-on-surface-variant font-['Inter'] font-medium">Curating your meal</p>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors" onclick="toggleCart()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar space-y-4 divide-y divide-stone-200" id="cart-items">
+<!-- Cart items injected here -->
+<div class="py-20 text-center space-y-4" id="empty-cart-msg">
+<span class="material-symbols-outlined text-4xl text-outline-variant" data-icon="restaurant_menu">restaurant_menu</span>
+<p class="text-on-surface-variant italic">Your table is empty...</p>
+</div>
+</div>
+<div class="pt-6 space-y-4 border-t border-outline-variant/20">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span id="subtotal">$0.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tax (10%)</span>
+<span id="tax">$0.00</span>
+</div>
+<div class="flex justify-between text-xl font-bold text-primary pt-2">
+<span>Total</span>
+<span id="total">$0.00</span>
+</div>
+<button class="w-full bg-[#163526] text-white rounded-full py-4 font-bold text-lg hover:bg-[#9f402d] transition-colors shadow-lg active:scale-[0.98]" onclick="checkout()">
+                    Checkout
+                </button>
+</div>
+</div>
+</aside>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-[#163526] dark:bg-stone-950 border-t border-[#424843]/20">
+<div class="flex flex-col items-center py-12 px-8 w-full font-['Inter'] text-sm tracking-wide">
+<div class="font-['Noto_Serif'] text-xl text-[#faf9f6] mb-6 font-bold">The Epicurean</div>
+<div class="flex space-x-8 mb-8">
+<a class="text-[#c2c8c1] hover:text-[#fd876f] transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#c2c8c1] hover:text-[#fd876f] transition-colors" href="#">Terms of Service</a>
+<a class="text-[#c2c8c1] hover:text-[#fd876f] transition-colors" href="code2.html#contact">Contact Us</a>
+</div>
+<p class="text-[#c2c8c1] opacity-60">© 2024 The Epicurean Editorial. All rights reserved.</p>
+</div>
+</footer>
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-primary/40 backdrop-blur-sm" id="success-modal">
+<div class="bg-surface p-10 rounded-xl max-w-md w-full text-center space-y-6 shadow-2xl scale-95 animate-in">
+<div class="w-20 h-20 bg-primary-fixed rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-primary">Bon Appétit!</h2>
+<p class="text-on-surface-variant">Your order has been sent to our kitchen. We'll notify you when it's ready for collection.</p>
+<button class="w-full bg-secondary text-white py-3 rounded-full font-bold hover:opacity-90 transition-opacity" onclick="closeModal()">Return to Menu</button>
+</div>
+</div>
+<script>
+        const menuItems = [
+            { id: 1, name: "Truffle Tagliatelle", price: 28.50, category: "Mains", image: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=80&w=800", desc: "Hand-rolled pasta, wild mushroom ragu, 24-month aged parmesan." },
+            { id: 2, name: "Roasted Duck Breast", price: 34.00, category: "Mains", image: "https://images.unsplash.com/photo-1518492104633-130d0cc84637?auto=format&fit=crop&q=80&w=800", desc: "Honey-glazed, star anise jus, parsnip purée, wilted kale." },
+            { id: 3, name: "Elderflower Spritz", price: 12.00, category: "Drinks", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=800", desc: "Gin, elderflower liqueur, prosecco, fresh mint and lime." },
+            { id: 4, name: "Heritage Beetroot Salad", price: 18.00, category: "Mains", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800", desc: "Whipped goat cheese, candied walnuts, balsamic reduction." },
+            { id: 5, name: "Dark Chocolate Fondant", price: 14.50, category: "Desserts", image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&q=80&w=800", desc: "Molten center, Madagascar vanilla gelato, salted caramel." },
+            { id: 6, name: "Old Fashioned Heritage", price: 16.00, category: "Drinks", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800", desc: "Small batch bourbon, maple syrup, orange zest, smoked oak." },
+            { id: 7, name: "Wild Seabass", price: 32.00, category: "Mains", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=800", desc: "Pan-seared, lemon butter sauce, crushed jersey royals." },
+            { id: 8, name: "Lemon Meringue Tart", price: 13.00, category: "Desserts", image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&q=80&w=800", desc: "Shortcrust pastry, zesty lemon curd, torched meringue peaks." },
+            { id: 9, name: "Espresso Martini", price: 15.00, category: "Drinks", image: "https://images.unsplash.com/photo-1545438102-799c3991ffb2?auto=format&fit=crop&q=80&w=800", desc: "Single origin espresso, vodka, coffee liqueur, cocoa dust." }
+        ];
+
+        let cart = [];
+
+        function renderMenu(filter = 'All') {
+            const grid = document.getElementById('menu-grid');
+            grid.innerHTML = '';
+            
+            const filteredItems = filter === 'All' ? menuItems : menuItems.filter(item => item.category === filter);
+            
+            filteredItems.forEach(item => {
+                const card = `
+                    <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                 data-alt="Professional food photography of ${item.name} with warm natural lighting and depth of field">
+                            <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-3 py-1 rounded-full text-sm font-bold text-primary">
+                                $${item.price.toFixed(2)}
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col h-[200px]">
+                            <h3 class="text-xl font-headline font-bold text-primary mb-2">${item.name}</h3>
+                            <p class="text-on-surface-variant text-sm flex-1 leading-relaxed">${item.desc}</p>
+                            <button onclick="addToCart(${item.id})" class="mt-4 bg-secondary text-white py-3 px-6 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-gradient-to-br from-secondary to-secondary-container transition-all duration-300">
+                                <span class="material-symbols-outlined text-lg" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                Add to Selection
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        function filterMenu(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-on-primary', 'active-filter');
+                btn.classList.add('bg-surface-container-high', 'text-on-surface');
+            });
+            event.currentTarget.classList.remove('bg-surface-container-high', 'text-on-surface');
+            event.currentTarget.classList.add('bg-primary', 'text-on-primary', 'active-filter');
+            renderMenu(category);
+        }
+
+        function addToCart(id) {
+            const item = menuItems.find(i => i.id === id);
+            const existing = cart.find(i => i.id === id);
+            
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...item, quantity: 1 });
+            }
+            
+            updateCartUI();
+            
+            // Show drawer on first add
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer.classList.contains('translate-x-full')) {
+                toggleCart();
+            }
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items');
+            const emptyMsg = document.getElementById('empty-cart-msg');
+            const cartCount = document.getElementById('cart-count');
+            
+            container.innerHTML = '';
+            let subtotal = 0;
+            let totalItems = 0;
+
+            if (cart.length === 0) {
+                container.appendChild(emptyMsg);
+                cartCount.classList.add('hidden');
+            } else {
+                cartCount.classList.remove('hidden');
+                cart.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                    totalItems += item.quantity;
+                    
+                    const el = document.createElement('div');
+                    el.className = 'py-4 flex gap-4 items-center animate-in';
+                    el.innerHTML = `
+                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                            <img src="${item.image}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-primary">${item.name}</h4>
+                            <p class="text-sm text-on-surface-variant">$${item.price.toFixed(2)} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-error hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-xl" data-icon="delete">delete</span>
+                        </button>
+                    `;
+                    container.appendChild(el);
+                });
+                cartCount.innerText = totalItems;
+            }
+
+            const tax = subtotal * 0.1;
+            const total = subtotal + tax;
+
+            document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').innerText = `$${tax.toFixed(2)}`;
+            document.getElementById('total').innerText = `$${total.toFixed(2)}`;
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('translate-x-full');
+        }
+
+        function checkout() {
+            if (cart.length === 0) return;
+            document.getElementById('success-modal').classList.replace('hidden', 'flex');
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.replace('flex', 'hidden');
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Initialize
+        renderMenu();
+    </script>
+</body></html>
